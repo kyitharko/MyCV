@@ -1,30 +1,84 @@
-\documentclass[12pt]{report}
+\documentclass[11pt, a4paper]{article}
+
+% Packages
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\graphicspath{ {images/} }
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage[c4paper,width=150mm, top=25mm, bottom=25mm,bindingoffset=6mm]{geometry}
-\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{url}
-%\def\@biblabel#1{}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\renewcommand{\bibname}{References}
-%\title{{reportTitle}\\}
-\author{Kyi Thar Ko}
-\date{2018 August 12}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+
+% Page geometry
+\geometry{
+    a4paper,
+    top=18mm,
+    bottom=18mm,
+    left=20mm,
+    right=20mm
+}
+
+% Colors
+\definecolor{accent}{RGB}{30, 80, 150}
+\definecolor{lightgray}{RGB}{130, 130, 130}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent,
+    pdfborder={0 0 0}
+}
+
+% Section formatting
+\titleformat{\section}
+    {\large\bfseries\color{accent}}
+    {}
+    {0em}
+    {}
+    [\vspace{-4pt}\rule{\linewidth}{0.6pt}\vspace{2pt}]
+
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+% Header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{lightgray}\thepage}
+
+% CV entry command: {Title}{Date}{Subtitle}{bullet list items or empty}
+\newcommand{\cvitem}[4]{%
+    \noindent
+    \begin{tabularx}{\linewidth}{@{}X r@{}}
+        \textbf{#1} & \textcolor{lightgray}{\small #2} \\
+        \textit{\small #3} & \\
+    \end{tabularx}%
+    \ifx&#4&\else
+        \vspace{2pt}
+        \begin{itemize}[leftmargin=1.2em, itemsep=1pt, parsep=0pt, topsep=2pt]
+            #4
+        \end{itemize}
+    \fi
+    \vspace{6pt}
+}
+
+\newcommand{\skillrow}[2]{%
+    \noindent\textbf{#1:} #2\par\vspace{3pt}
+}
 
 \begin{document}
-\input{titlePage}
-\input{knowledge}
-\input{interestedParts}
-\input{comments}
-\input{difficultToUnderstand}
-\input{otherComments}
-\bibliography{refforIEECS}
-\bibliographystyle{plain}
+\pagestyle{fancy}
+
+\input{header}
+\input{education}
+\input{experience}
+\input{skills}
+\input{projects}
+\input{awards}
 
 \end{document}
-

@@ -1,0 +1,18 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+*.ps
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.bak
+
+# Compiled output (keep PDF in git if desired; remove this line to track it)
+*.pdf
