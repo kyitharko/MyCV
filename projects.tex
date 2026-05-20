@@ -1,26 +1,10 @@
 % ---- Projects ----
 \section{Selected Projects}
 
-\cvitem
-{dockpilot}
-{2026}
-{Go, Docker, REST API, CLI --- \href{https://github.com/kyitharko/dockpilot}{github.com/kyitharko/dockpilot}}
-{
-    \item Developed a lightweight Go-based container deployment tool for managing individual services through Docker-based workflows.
-    \item Implemented CLI and REST API interfaces for deploying, removing, listing, checking status, and retrieving logs from managed containers.
-    \item Designed a shared engine layer so CLI commands and API handlers use consistent container management logic.
-    \item Added built-in service presets for MongoDB, PostgreSQL, Redis, and Nginx to support repeatable local infrastructure deployment.
-    \item Documented API endpoints, response formats, error codes, container naming conventions, and manual usage examples.
-}
-
-\cvitem
-{stackpilot}
-{2026}
-{Go, YAML, Docker orchestration, REST API client --- \href{https://github.com/kyitharko/stackpilot}{github.com/kyitharko/stackpilot}}
-{
-    \item Developed a higher-level stack orchestration tool that reads YAML service definitions and delegates container execution to dockpilot.
-    \item Implemented stack validation, service dependency resolution, and deployment ordering using dependency-graph concepts.
-    \item Designed separation of responsibilities between stackpilot and dockpilot: stackpilot handles YAML, validation, and dependency order; dockpilot handles Docker execution.
-    \item Added stack deploy, remove, status, and validate workflows for multi-service application environments.
-    \item Documented manual test scenarios including successful deployment, idempotency, removal order, volume removal, cycle detection, and dockpilot-unreachable cases.
-}
+\textbf{PEKS-NDN Reference Implementation} (in progress) \hfill C++
+\begin{itemize}
+	\item Reimplementation of the PEKS-based NDN strategy from Ko et al. (2020), reconstructed
+	from the published papers --- documented and benchmarked.
+	\item Goal: make the algorithm accessible to engineers working on privacy-preserving content
+	networks (encrypted search, confidential storage, IPFS-adjacent systems).
+\end{itemize}
