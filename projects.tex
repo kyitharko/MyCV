@@ -1,8 +1,12 @@
 % ---- Projects ----
-\section{Selected Projects}
+\section{Selected Security Engineering Project}
 
-\textbf{PEKS-NDN Reference Implementation} (in progress) \hfill Rust
+\textbf{PEKS-NDN Cryptographic Reference Implementation} (in progress) \hfill Rust
 \begin{itemize}
-	\item Rust reimplementation of the PEKS-based NDN strategy from Ko et al. (2020). Uses BLS12-381 asymmetric pairings via the arkworks library; the translation from the original symmetric-pairing scheme (PBC Type A) required reasoning about group placement to preserve the pairing-equation type-check while optimizing for in-network deployment performance. Implements KeyGen, Encrypt, Trapdoor, and Test, with hash-to-curve following IETF RFC 9380. Test suite includes determinism, probabilistic-encryption, and end-to-end round-trip correctness checks. Documentation captures the cryptographic design rationale.
-	Repository: github.com/kyitharko/peks\_based\_ndn.
+	\item Reimplementing the PEKS-based Named Data Networking privacy strategy from previous doctoral research in Rust using BLS12-381 asymmetric pairings through the arkworks ecosystem.
+	\item Translated the original symmetric-pairing construction based on PBC Type A pairings to an asymmetric pairing setting, reasoning about source-group and target-group placement to preserve cryptographic equation correctness.
+	\item Implemented the core PEKS operations: KeyGen, Encrypt, Trapdoor, and Test.
+	\item Implemented hash-to-curve functionality following IETF RFC 9380 and developed tests for determinism where expected, probabilistic encryption behavior, and end-to-end round-trip correctness.
+	\item Documented the cryptographic design rationale and implementation decisions, including changes required when moving from symmetric to asymmetric pairings.
+	\item Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
 \end{itemize}
