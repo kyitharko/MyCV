@@ -1,10 +1,8 @@
 % ---- Projects ----
 \section{Selected Projects}
 
-\textbf{PEKS-NDN Reference Implementation} (in progress) \hfill C++
+\textbf{PEKS-NDN Reference Implementation} (in progress) \hfill Rust
 \begin{itemize}
-	\item Reimplementation of the PEKS-based NDN strategy from Ko et al. (2020), reconstructed
-	from the published papers --- documented and benchmarked.
-	\item Goal: make the algorithm accessible to engineers working on privacy-preserving content
-	networks (encrypted search, confidential storage, IPFS-adjacent systems).
+	\item Rust reimplementation of the PEKS-based NDN strategy from Ko et al. (2020). Uses BLS12-381 asymmetric pairings via the arkworks library; the translation from the original symmetric-pairing scheme (PBC Type A) required reasoning about group placement to preserve the pairing-equation type-check while optimizing for in-network deployment performance. Implements KeyGen, Encrypt, Trapdoor, and Test, with hash-to-curve following IETF RFC 9380. Test suite includes determinism, probabilistic-encryption, and end-to-end round-trip correctness checks. Documentation captures the cryptographic design rationale.
+	Repository: github.com/kyitharko/peks\_based\_ndn.
 \end{itemize}
