@@ -1,12 +1,18 @@
 % ---- Projects ----
-\section{Selected Research Engineering Project}
+% Keep the section heading with the PEKS-NDN project at the top of page 2.
+\newpage
+\section{Selected Software \& Research Engineering Projects}
 
 \textbf{PEKS-NDN Cryptographic Reference Implementation} (in progress) \hfill Rust
 \begin{itemize}
-	\item Reimplementing the PEKS-based Named Data Networking privacy strategy from previous doctoral research in Rust using BLS12-381 asymmetric pairings through the arkworks ecosystem.
-	\item Translated the original symmetric-pairing construction based on PBC Type A pairings to an asymmetric pairing setting, reasoning about source-group and target-group placement to preserve cryptographic equation correctness.
-	\item Implemented the core cryptographic operations: KeyGen, Encrypt, Trapdoor, and Test, with hash-to-curve following IETF RFC 9380.
-	\item Developed automated tests for determinism where expected, probabilistic encryption behavior, and end-to-end round-trip correctness.
-	\item Documented the cryptographic design rationale, protocol assumptions, interoperability considerations, and implementation decisions required when moving from symmetric to asymmetric pairings.
+	\item Reimplementing published doctoral work on PEKS-based NDN name privacy in Rust using BLS12-381 asymmetric pairings through arkworks, translating the original PBC Type A symmetric construction while reasoning about source- and target-group placement.
+	\item Implemented KeyGen, Encrypt, Trapdoor, Test, and serialization, with hash-to-curve using the arkworks construction following the RFC 9380 hash-to-curve design.
+	\item Developed automated tests for expected determinism, probabilistic encryption, and end-to-end correctness; documented protocol assumptions, design rationale, and implementation decisions for experimental evaluation.
 	\item Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
+\end{itemize}
+
+\textbf{Proprietary In-House Business Operations Application} --- Python / PostgreSQL
+\begin{itemize}
+	\item Designed relational database schemas and implemented CRUD functionality for an internal business application using Python and PostgreSQL, including application data modelling and database-backed business workflows.
+	\item Source code is proprietary and not publicly available.
 \end{itemize}
