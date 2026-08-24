@@ -3,16 +3,16 @@
 \newpage
 \section{Selected Software \& Research Engineering Projects}
 
-\textbf{PEKS-NDN Cryptographic Reference Implementation} (in progress) \hfill Rust
+\textbf{PEKS-Based NDN Research Prototype} \hfill C++ / PBC
 \begin{itemize}
-	\item Reimplementing published doctoral work on PEKS-based NDN name privacy in Rust using BLS12-381 asymmetric pairings through arkworks, translating the original PBC Type A symmetric construction while reasoning about source- and target-group placement.
-	\item Implemented KeyGen, Encrypt, Trapdoor, Test, and serialization, with hash-to-curve using the arkworks construction following the RFC 9380 hash-to-curve design.
-	\item Developed automated tests for expected determinism, probabilistic encryption, and end-to-end correctness; documented protocol assumptions, design rationale, and implementation decisions for experimental evaluation.
-	\item Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
+	\item Implemented the published PEKS-based NDN name-privacy strategy in C++ using the Pairing-Based Cryptography (PBC) library.
+	\item Implemented pairing-based cryptographic operations and protocol logic for KeyGen, encryption- and search-related operations, and experimental evaluation.
+	\item Benchmarked cryptographic and networking performance as part of doctoral research that contributed to two peer-reviewed publications.
 \end{itemize}
 
-\textbf{Proprietary In-House Business Operations Application} --- Python / PostgreSQL
+\textbf{PEKS-NDN Cryptographic Reference Implementation} (in progress) \hfill Rust
 \begin{itemize}
-	\item Designed relational database schemas and implemented CRUD functionality for an internal business application using Python and PostgreSQL, including application data modelling and database-backed business workflows.
-	\item Source code is proprietary and not publicly available.
+	\item Reimplementing the published research with BLS12-381 and arkworks, adapting the original symmetric-pairing construction to asymmetric source and target groups.
+	\item Implemented KeyGen, Encrypt, Trapdoor, Test, serialization, and hash-to-curve, with automated correctness tests and design documentation.
+	\item Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
 \end{itemize}
