@@ -1,19 +1,19 @@
 % ---- Projects ----
 % Keep the section heading with the PEKS-NDN project at the top of page 2.
 \newpage
-\section{Selected Security Research \& Engineering Projects}
+\section{Selected Protocol \& Cryptography Research}
 
 \textbf{PEKS-Based NDN Name-Privacy Protocol} \hfill C++ / PBC
 \begin{itemize}
-	\item Implemented a PEKS-based Named Data Networking name-privacy protocol in C++ using the Pairing-Based Cryptography (PBC) library, translating cryptographic and protocol design into a working research prototype.
-	\item Implemented pairing-based cryptographic operations and protocol logic for key generation, encryption, and trapdoor/search operations.
-	\item Evaluated cryptographic and network-forwarding performance, and investigated trapdoor assignment in two-tier network topologies.
-	\item Contributed to two peer-reviewed publications as part of doctoral research.
+	\item Designed and implemented a PEKS-based protocol strategy for name privacy in Named Data Networking, translating cryptographic and protocol designs into a C++ implementation using the Pairing-Based Cryptography (PBC) library.
+	\item Analyzed architectural, security, and performance trade-offs in the protocol design, and evaluated its cryptographic and network-forwarding behavior.
+	\item Extended the research to two-tier network architectures and trapdoor assignment.
+	\item Resulted in two peer-reviewed publications.
 \end{itemize}
 
 \textbf{PEKS-NDN Cryptographic Reference Implementation} (in progress) \hfill Rust
 \begin{itemize}
-	\item Reimplementing the published research in Rust with BLS12-381 and arkworks, adapting the original symmetric-pairing construction to asymmetric source and target groups.
+	\item Reimplementing the published protocol in Rust with BLS12-381 and arkworks, adapting the original symmetric-pairing construction to asymmetric source and target groups.
 	\item Implemented KeyGen, Encrypt, Trapdoor, Test, serialization, and hash-to-curve, with automated correctness tests and design documentation.
 	\item Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
 \end{itemize}
