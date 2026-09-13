@@ -1,18 +1,19 @@
 % ---- Projects ----
-\section{Selected Research Projects}
+% Keep the section heading with the PEKS-NDN project at the top of page 2.
+\newpage
+\section{Selected Security Research \& Engineering Projects}
 
-\textbf{PEKS-Based NDN Privacy-Preserving Protocol} \hfill C++ / PBC
+\textbf{PEKS-Based NDN Name-Privacy Protocol} \hfill C++ / PBC
 \begin{itemize}
-	\item Designed a privacy-preserving networking protocol (PEKS-based Named Data Networking) and implemented its pairing-based cryptographic core in C++ using the Pairing-Based Cryptography (PBC) library.
-	\item Integrated the cryptographic scheme into the network-forwarding protocol and reasoned about the correctness and security properties of the construction.
-	\item Experimentally evaluated cryptographic and network-forwarding performance; extended the design to two-tier network architectures and trapdoor assignment.
-	\item Resulted in two peer-reviewed publications.
+	\item Implemented a PEKS-based Named Data Networking name-privacy protocol in C++ using the Pairing-Based Cryptography (PBC) library, translating cryptographic and protocol design into a working research prototype.
+	\item Implemented pairing-based cryptographic operations and protocol logic for key generation, encryption, and trapdoor/search operations.
+	\item Evaluated cryptographic and network-forwarding performance, and investigated trapdoor assignment in two-tier network topologies.
+	\item Contributed to two peer-reviewed publications as part of doctoral research.
 \end{itemize}
 
-\textbf{PEKS-NDN Cryptographic Reference Implementation} (active research project) \hfill Rust
+\textbf{PEKS-NDN Cryptographic Reference Implementation} (in progress) \hfill Rust
 \begin{itemize}
-	\item Reimplementing the published PEKS-NDN construction in Rust using arkworks and BLS12-381 -- translating an academic cryptographic construction into working, tested software.
-	\item Adapted the pairing equations and group placement from a symmetric to an asymmetric-pairing (source/target group) construction, reasoning explicitly about cryptographic correctness under the new group structure.
-	\item Implemented hash-to-curve per RFC 9380, key generation, encryption, and trapdoor/search operations, with serialization and automated correctness tests.
-	\item Active, openly documented research/reference implementation -- not production or commercial software. Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
+	\item Reimplementing the published research in Rust with BLS12-381 and arkworks, adapting the original symmetric-pairing construction to asymmetric source and target groups.
+	\item Implemented KeyGen, Encrypt, Trapdoor, Test, serialization, and hash-to-curve, with automated correctness tests and design documentation.
+	\item Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
 \end{itemize}
