@@ -9,10 +9,10 @@
 	\item Resulted in two peer-reviewed publications.
 \end{itemize}
 
-\textbf{PEKS-NDN Cryptographic Reference Implementation} (active research project) \hfill Rust
+\textbf{PEKS-NDN Cryptographic Reference Implementation} (active development) \hfill Rust
 \begin{itemize}
-	\item Reimplementing the published PEKS-NDN construction in Rust using arkworks and BLS12-381 -- translating an academic cryptographic construction into working, tested software.
-	\item Adapted the pairing equations and group placement from a symmetric to an asymmetric-pairing (source/target group) construction, reasoning explicitly about cryptographic correctness under the new group structure.
-	\item Implemented hash-to-curve per RFC 9380, key generation, encryption, and trapdoor/search operations, with serialization and automated correctness tests.
+	\item Reimplementing a published cryptographic networking protocol in Rust, translating an academic C++/PBC construction into idiomatic Rust using arkworks and BLS12-381.
+	\item Migrated the underlying pairing construction from symmetric to asymmetric source/target groups -- a correctness-critical refactor requiring careful reasoning about group placement and API semantics.
+	\item Implemented KeyGen, Encrypt, Trapdoor, and Test operations, plus hash-to-curve following RFC 9380 design principles, with automated correctness tests covering the full pipeline.
 	\item Active, openly documented research/reference implementation -- not production or commercial software. Repository: \href{https://github.com/kyitharko/peks_based_ndn}{github.com/kyitharko/peks\_based\_ndn}.
 \end{itemize}
